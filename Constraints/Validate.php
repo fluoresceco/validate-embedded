@@ -16,5 +16,5 @@ class Validate extends Constraint
     /**
      * @var array Embedded groups
      */
-    public $embeddedGroups;
+    public $embeddedGroups = array(Constraint::DEFAULT_GROUP);
 }

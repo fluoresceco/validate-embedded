@@ -31,15 +31,8 @@ class ValidateValidator extends ConstraintValidator
         }
 
         // Validate the embedded object(s)
-        $validator = $this->context->getValidator();
-        $violations = $validator->validate($value, null, $constraint->embeddedGroups);
-
-        // Add violations to the calling context
-        foreach ($violations as $violation) {
-            $this->context->buildViolation($violation->getMessage())
-                ->atPath($violation->getPropertyPath())
-                ->setCode($violation->getCode())
-                ->addViolation();
-        }
+        $this->context->getValidator()
+            ->inContext($this->context)
+            ->validate($value, null, $constraint->embeddedGroups);
     }
 }
