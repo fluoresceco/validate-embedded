@@ -1,7 +1,7 @@
 {
     "name": "fluoresce/validate-embedded",
     "description": "Constraint enabling group-based validation of embedded objects with the Symfony Validator Component.",
-    "keywords": ["validate", "validation", "validator", "constraint", "symfony2", "symfony3"],
+    "keywords": ["validate", "validation", "validator", "constraint", "symfony2", "symfony3", "symfony4"],
     "homepage": "https://github.com/fluoresceco/validate-embedded",
     "license": "MIT",
     "authors": [
@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "symfony/validator": "~2.8|~3.0"
+        "symfony/validator": "~2.8|~3.0|~4.0"
     },
     "minimum-stability": "stable",
     "autoload": {
